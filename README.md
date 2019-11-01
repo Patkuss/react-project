@@ -1,1 +1,1 @@
-https://git.heroku.com/boiling-cliffs-87909.git
+https://boiling-cliffs-87909.herokuapp.com/
