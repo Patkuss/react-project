@@ -8,13 +8,13 @@ import { settings } from '../../data/dataStore';
 
 class Column extends React.Component {
   state = {
-    cards: this.props.cards || []
+    cards: this.props.cards || [],
   }
 
   static propTypes = {
     title: PropTypes.node.isRequired,
     cards: PropTypes.array,
-    icon: PropTypes.string.isRequired
+    icon: PropTypes.string.isRequired,
   }
 
   addCard(title) {
@@ -22,12 +22,12 @@ class Column extends React.Component {
       {
         cards: [
           ...state.cards,
-            {
-              key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
-              title,
-              icon: "list-alt"
-            }
-        ]
+          {
+            key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+            title,
+            icon: 'list-alt',
+          },
+        ],
       }
     ));
   }
@@ -50,7 +50,7 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
         </div>
       </section>
-    )
+    );
   }
 }
 
