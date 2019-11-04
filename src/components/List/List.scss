@@ -11,8 +11,9 @@
 
 .columns {
   display: flex;
-  justify-content: space-between;
   overflow: auto;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .creator {
