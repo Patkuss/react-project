@@ -16,9 +16,9 @@ class SearchResults extends React.Component {
       <Container>
         <section className={styles.component}>
           <div className={styles.cards}>
-            {cards.map(cardData => (
+            {cards.length ? cards.map(cardData => (
               <Card key={cardData.id} {...cardData} />
-            ))}
+            )) : 'no results message' }
           </div>
         </section>
       </Container>
